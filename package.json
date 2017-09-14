@@ -2,12 +2,17 @@
   "name": "language-jil",
   "description": "Syntax highlighting for Autosys JIL",
   "repository": "https://github.com/stephaneplante/language-jil",
-  "version": "0.0.0",
-  "engines": {"atom": ">=1.0.0 <2.0.0"},
+  "version": "0.1.0",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
   "_location": "/language-jil",
-  "keywords": ["syntax","theme"],
+  "keywords": [
+    "language",
+    "autosys",
+    "jil"
+  ],
   "license": "GNU GPL v3",
-  "keywords": ["language","autosys","jil"],
   "main": "./lib/language-jil",
   "readme": "Autosys JIL highlighting for Atom",
   "readmeFilename": "README.md"
