@@ -1,0 +1,54 @@
+comment: "Created by Stephane Plante - Omegaone-Soft."
+fileTypes: [
+  "jil"
+]
+name: "JIL"
+patterns: [
+  {
+    match: "\\n"
+    name: "meta.ending-space"
+  }
+  {
+    begin: "^(?=\\t)"
+    end: "(?=[^\\t])"
+    name: "meta.leading-space"
+    patterns: [
+      {
+        captures:
+          "1":
+            name: "meta.odd-tab.tabs"
+          "2":
+            name: "meta.even-tab.tabs"
+        match: "(\\t)(\\t)?"
+      }
+    ]
+  }
+  {
+    begin: "^(?= )"
+    end: "(?=[^ ])"
+    name: "meta.leading-space"
+    patterns: [
+      {
+        captures:
+          "1":
+            name: "meta.odd-tab.spaces"
+          "2":
+            name: "meta.even-tab.spaces"
+        match: "(  )(  )?"
+      }
+    ]
+  }
+  {
+    match: "(?i:\\s*\\b(delete_box|delete_job|insert_job|override_job|update_job)\\b\\s*)"
+    name: "entity.name.function.asp"
+  }
+  {
+    match: "(?i:\\b(alarm_if_fail|application|avg_runtime|box_name|box_success|box_terminator|command|condition|date_conditions|days_of_week|description|exclude_calendar|group|job_terminator|job_type|machine|max_exit_success|max_run_alarm|min_run_alarm|n_retrys|notification_msg|owner|permission|profile|resources|run_calendar|send_notification|start_times|start_mins|std_err_file|std_out_file|term_run_time|watch_file|watch_file_change_type|watch_file_recursive|watch_file_type|watch_file_win_user|watch_no_change)\\b)"
+    name: "keyword.control.asp"
+  }
+  {
+    match: "!|\\$|%|&|\\*|\\-\\-|\\-|\\+\\+|\\+|~|===|==|=|!=|!==|<=|>=|<<=|>>=|>>>=|<>|<|>|!|&&|\\|\\||\\?\\:|\\*=|/=|%=|\\+=|\\-=|&=|\\^="
+    name: "keyword.operator.js"
+  }
+]
+scopeName: "source.jil"
