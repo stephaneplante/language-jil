@@ -2,7 +2,7 @@
   "name": "language-jil",
   "description": "Syntax highlighting for Autosys JIL",
   "repository": "https://github.com/stephaneplante/language-jil",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
